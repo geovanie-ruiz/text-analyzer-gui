@@ -13,7 +13,7 @@ namespace TextAnalyzer
 {
 	public partial class ViewController : NSViewController
 	{
-        private bool wasRan = false;
+        public bool wasRan = false;
 
         private HtmlNode parsePoem(HtmlNode poem)
         {

@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1703.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalyzer", "TextAnalyzer.csproj", "{49A2BF41-4880-42B2-A4EF-CDDC83756CE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalyzer.Tests", "TextAnalyzer.Tests\TextAnalyzer.Tests.csproj", "{A0879114-6EE6-410E-B000-5202268B97DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +17,20 @@ Global
 		{49A2BF41-4880-42B2-A4EF-CDDC83756CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49A2BF41-4880-42B2-A4EF-CDDC83756CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49A2BF41-4880-42B2-A4EF-CDDC83756CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0879114-6EE6-410E-B000-5202268B97DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0879114-6EE6-410E-B000-5202268B97DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0879114-6EE6-410E-B000-5202268B97DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0879114-6EE6-410E-B000-5202268B97DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {88582724-7C37-43A3-A744-505AFC189315}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
 	EndGlobalSection
 EndGlobal
