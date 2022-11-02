@@ -11,10 +11,23 @@ using System.Linq;
 
 namespace TextAnalyzer
 {
+    /// <summary>
+    /// Logic for the UI
+    /// </summary>
 	public partial class ViewController : NSViewController
 	{
+        /// <summary>
+        /// Flag variable to indicate reader was ran; prevents the button from
+        /// being spammed but in the future would be set to false if the data
+        /// source somehow changed
+        /// </summary>
         public bool wasRan = false;
 
+        /// <summary>
+        /// Parse the poem segment of a larger document; remove line breaks
+        /// </summary>
+        /// <param name="poem">poem-specific text</param>
+        /// <returns>HtmlNode poem text after parsing</returns>
         private HtmlNode parsePoem(HtmlNode poem)
         {
             /*
@@ -32,10 +45,18 @@ namespace TextAnalyzer
             return poemDoc.DocumentNode.SelectSingleNode("//div");
         }
 
+        /// <summary>
+        /// Not used: A constructor used when creating managed representations
+        /// of unmanaged objects
+        /// </summary>
+        /// <param name="handle">Reference to unmanaged object</param>
         public ViewController (IntPtr handle) : base (handle)
 		{
 		}
 
+        /// <summary>
+        /// Run setup after a view has loaded
+        /// </summary>
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -43,6 +64,9 @@ namespace TextAnalyzer
 			// Do any additional setup after loading the view.
 		}
 
+        /// <summary>
+        /// Creates a reference to a bound object
+        /// </summary>
 		public override NSObject RepresentedObject {
 			get {
 				return base.RepresentedObject;
@@ -53,6 +77,10 @@ namespace TextAnalyzer
 			}
 		}
 
+        /// <summary>
+        /// Functionality to run after the button is clicked
+        /// </summary>
+        /// <param name="sender">Object that triggered the event</param>
         partial void ClickedButton(NSObject sender)
         {
             if (wasRan) return;
